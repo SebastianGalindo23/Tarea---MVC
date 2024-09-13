@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Marca";
+}
+@model IEnumerable<Tarea___MVC.Models.Marca>
+
+<div style="overflow: auto;">
+    <h1 style="float: left;">Marca</h1>
+    <a class="btn btn-primary mb-3" style="float: right;" asp-controller="Marca" asp-action="Crear">Agregar Marca</a>
+</div>
+
+<table class="table ">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pais de Origen</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var marca in Model)
+        {
+            <tr>
+                <th scope="row">@marca.Id</th>
+                <td>@marca.Nombre</td>
+                <td>@marca.PaisDeOrigen</td>                
+            </tr>
+        }
+    </tbody>
+</table>

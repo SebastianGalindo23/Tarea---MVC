@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+}
+@model IEnumerable<Tarea___MVC.Models.Cliente>
+
+<div style="overflow: auto;">
+    <h1 style="float: left;">Clientes</h1>
+    <a class="btn btn-primary mb-3" style="float: right;" asp-controller="Clientes" asp-action="Crear">Agregar Cliente</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Email</th>
+            <th scope="col">Teléfono</th>
+
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach(var cliente in Model)
+        {
+            <tr>
+                <th scope="row">@cliente.Id</th>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Telefono</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

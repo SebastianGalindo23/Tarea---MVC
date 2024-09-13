@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Empleados";
+}
+@model IEnumerable<Tarea___MVC.Models.Empleado>
+
+<div style="overflow: auto;">
+    <h1 style="float: left;">Empleados</h1>
+    <a class="btn btn-primary mb-3" style="float: right;" asp-controller="Empleados" asp-action="Crear">Agregar Empleado</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">Fecha de Contratacion</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var empleado in Model)
+        {
+            <tr>
+                <th scope="row">@empleado.Id</th>
+                <td>@empleado.Nombre</td>
+                <td>@empleado.Cargo</td>
+                <td>@empleado.Departamento</td>
+                <td>@empleado.FechaContratacion</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

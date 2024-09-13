@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Crear Categoria";
+}
+@model Tarea___MVC.Models.Categoria
+
+<div class="container mt-5">
+    <h1 class="nb-4">Crear Nueva Categoria</h1>
+</div>
+
+<div class="card nb-4 mx-4">
+    <div class="card-body">
+        <form asp-action="Crear" method="post">
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Ingresa el Nombre" asp-for="Nombre">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Descripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" placeholder="Ingresa la Descripcion" asp-for="Descripcion">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Agregar Descripcion</button>
+            </div>
+        </form>
+    </div>
+</div>

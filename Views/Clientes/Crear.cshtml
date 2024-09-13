@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Crear Cliente";
+}
+@model Tarea___MVC.Models.Cliente
+
+<div class="container mt-5">
+    <h1 class="nb-4">Crear nuevo Cliente</h1>
+</div>
+
+<div class="card nb-4 mx-4">
+    <div class="card-body">
+        <form asp-action="Crear" method="post">
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Ingresa el Nombre" asp-for="Nombre">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input type="text" class="form-control" placeholder="Ingresa tu Email" asp-for="Email">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Telefono" class="form-label">Telefono</label>
+                <input type="tel" class="form-control" placeholder="Ingresa tu Email" asp-for="Telefono">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Agregar Cliente</button>
+            </div>
+        </form>
+    </div>
+</div>

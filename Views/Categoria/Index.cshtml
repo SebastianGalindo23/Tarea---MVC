@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Categorias";
+}
+@model IEnumerable<Tarea___MVC.Models.Categoria>
+
+<div style="overflow: auto;">
+    <h1 style="float: left;">Categoria</h1>
+    <a class="btn btn-primary mb-3" style="float: right;" asp-controller="Categoria" asp-action="Crear">Agregar Categoria</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre </th>
+            <th scope="col">Descripcion</th>
+
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var Categoria in Model)
+        {
+         <tr>
+            <th scope="row">@Categoria.Id</th>
+            <td>@Categoria.Nombre</td>
+            <td>@Categoria.Descripcion</td>
+         </tr>
+
+        }
+    </tbody>
+
+</table>

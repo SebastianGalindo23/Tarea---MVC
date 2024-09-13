@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Crear Marca";
+}
+@model Tarea___MVC.Models.Marca
+
+<div class="container mt-5">
+    <h1 class="nb-4">Crear Nueva Marca</h1>
+</div>
+
+<div class="card nb-4 mx-4">
+    <div class="card-body">
+        <form asp-action="Crear" method="post">    
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Ingresa el Nombre" asp-for="Nombre">
+            </div>
+            <div class="mb-3">
+                <label asp-for="PaisDeOrigen" class="form-label">País de Origen</label>
+                <input type="text" class="form-control" placeholder="Ingresa el país de origen" asp-for="PaisDeOrigen">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Agregar Marca</button>
+            </div>
+        </form>
+    </div>
+</div>
+
